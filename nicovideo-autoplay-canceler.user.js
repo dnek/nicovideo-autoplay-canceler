@@ -1,0 +1,77 @@
+// ==UserScript==
+// @name        nicovideo-autoplay-canceler
+// @namespace   https://github.com/dnek
+// @version     1.0
+// @author      dnek
+// @description Immediately after video autoplay starts in nicovideo, automatically click the play button to pause the video.
+// @description:ja    ニコニコ動画で動画の自動再生が開始された直後に、自動的に再生ボタンをクリックして動画を一時停止します。連続再生をキャンセルするUserScriptは「nicovideo-next-video-canceler」という別のスクリプトです。
+// @homepageURL https://github.com/dnek/nicovideo-autoplay-canceler
+// @match       https://www.nicovideo.jp/watch/*
+// @grant       none
+// @license     MIT license
+// ==/UserScript==
+
+(function () {
+    'use strict';
+
+    let currentHref = '';
+    let isCanceled = false;
+
+    const observePlayButton = (parentNode) => {
+        const buttonEl = parentNode.querySelector('button[aria-label="動画を再生"]');
+        if (buttonEl !== null) {
+            const playButtonObserver = new MutationObserver((mutationList, observer) => {
+                for (const mutation of mutationList) {
+                    if (isCanceled) {
+                        break;
+                    }
+                    if (mutation.type !== 'attributes') {
+                        continue;
+                    }
+                    const attrName = mutation.attributeName;
+                    if (attrName === 'aria-label') {
+                        const attr = buttonEl.getAttribute(attrName);
+                        console.log(`${attrName} changed to ${attr}`);
+                        if (attr === '動画を停止') {
+                            buttonEl.click();
+                            isCanceled = true;
+                            console.log('autoplay canceled.');
+                            break;
+                        }
+                    }
+                }
+            });
+
+            playButtonObserver.observe(buttonEl, {
+                attributes: true,
+                attributeFilter: ['aria-label'],
+            });
+        } else {
+            console.log("no play button.");
+        }
+    };
+
+    const observer = new MutationObserver((mutationList, observer) => {
+        const href = location.href;
+        if (currentHref !== href) {
+            currentHref = href;
+            console.log(`href changed to ${currentHref}`);
+            isCanceled = false;
+        }
+        mutationList.filter(mutation => mutation.type === 'childList').forEach(mutation => {
+            for (const node of mutation.addedNodes) {
+                if (
+                    node.nodeType === 1 &&
+                    node.innerHTML.includes('aria-label="動画を再生"')
+                ) {
+                    observePlayButton(node);
+                }
+            }
+        });
+    });
+    const options = {
+        childList: true,
+        subtree: true,
+    };
+    observer.observe(document.body, options);
+})();
