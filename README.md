@@ -5,7 +5,7 @@
 - (追加予定)
 
 ## インストール
-- Greasy Fork (追加予定)
+- Greasy Fork https://greasyfork.org/ja/scripts/502787-nicovideo-autoplay-canceler
 - https://github.com/dnek/nicovideo-autoplay-canceler/raw/main/nicovideo-autoplay-canceler.user.js
 
 ## 関連
