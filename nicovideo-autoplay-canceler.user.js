@@ -6,6 +6,8 @@
 // @description Immediately after video autoplay starts in nicovideo, automatically click the play button to pause the video.
 // @description:ja    ニコニコ動画で動画の自動再生が開始された直後に、自動的に再生ボタンをクリックして動画を一時停止します。連続再生をキャンセルするUserScriptは「nicovideo-next-video-canceler」という別のスクリプトです。
 // @homepageURL https://github.com/dnek/nicovideo-autoplay-canceler
+// @updateURL   https://github.com/dnek/nicovideo-autoplay-canceler/raw/main/nicovideo-autoplay-canceler.user.js
+// @downloadURL https://github.com/dnek/nicovideo-autoplay-canceler/raw/main/nicovideo-autoplay-canceler.user.js
 // @match       https://www.nicovideo.jp/watch/*
 // @grant       none
 // @license     MIT license
