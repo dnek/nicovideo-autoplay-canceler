@@ -10,3 +10,4 @@
 
 ## 関連
 - 連続再生をキャンセルするUserScript https://github.com/dnek/nicovideo-next-video-canceler
+- ウィンドウサイズに合わせてプレイヤーを拡大するUserScript https://github.com/dnek/nicovideo-player-expander
