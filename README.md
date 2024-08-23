@@ -2,6 +2,9 @@
 [ニコニコ動画](https://www.nicovideo.jp/video_top)で動画の自動再生が開始された直後に自動的に一時停止するUserScriptです。
 停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。
 
+## 紹介動画
+- https://www.nicovideo.jp/watch/sm43938214
+
 ## 経緯説明記事
 - https://blog.dnek.net/entry/2024/08/06/170118
 
