@@ -1,5 +1,5 @@
 # nicovideo-autoplay-canceler
-[ニコニコ動画](https://www.nicovideo.jp/video_top)で動画の自動再生が開始された直後に自動的に一時停止するUserScriptです。
+[ニコニコ動画](https://www.nicovideo.jp/video_top)で動画の自動再生が開始された直後に自動的に一時停止します。
 停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。
 
 ## 紹介動画シリーズ
@@ -9,6 +9,7 @@
 - https://blog.dnek.net/entry/2024/08/06/170118
 
 ## インストール
+- Chromeウェブストア https://chrome.google.com/webstore/detail/hoognocgkgdffkpbjemphokaghkhhiii
 - Greasy Fork https://greasyfork.org/ja/scripts/502787-nicovideo-autoplay-canceler
 - https://github.com/dnek/nicovideo-autoplay-canceler/raw/main/nicovideo-autoplay-canceler.user.js
 
