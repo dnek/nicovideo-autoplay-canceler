@@ -1,0 +1,25 @@
+{
+    "name": "nicovideo-autoplay-canceler",
+    "version": "2.1",
+    "manifest_version": 3,
+    "description": "ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.nicovideo.jp/watch/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "128": "icons/icon_128.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "nicovideo-autoplay-canceler@id-for-addon.dnek.net",
+            "strict_min_version": "109.0"
+        }
+    }
+}
