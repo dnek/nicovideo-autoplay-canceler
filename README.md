@@ -10,6 +10,7 @@
 
 ## インストール
 - Chromeウェブストア https://chrome.google.com/webstore/detail/hoognocgkgdffkpbjemphokaghkhhiii
+- Firefoxアドオン https://addons.mozilla.org/ja/firefox/addon/nicovideo-next-video-canceler/
 - Greasy Fork（多くのブラウザに対応） https://greasyfork.org/ja/scripts/502787-nicovideo-autoplay-canceler
 
 ## ソース
