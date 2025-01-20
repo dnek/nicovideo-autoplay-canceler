@@ -19,4 +19,5 @@
 ## 関連
 - 連続再生を少し便利にする拡張機能 https://github.com/dnek/nicovideo-next-video-canceler
 - 「シアターモード」または「ブラウザ内最大化」をする拡張機能 https://github.com/dnek/nicovideo-player-expander
-- コントローラーを自然にフェードイン・フェードアウトさせる拡張機能 https://github.com/dnek/nicovideo-comfortable-controller-fader
+- ~~コントローラーを自然にフェードイン・フェードアウトさせる拡張機能 https://github.com/dnek/nicovideo-comfortable-controller-fader~~
+  - ニコニコ公式が解決済み
