@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name        nicovideo-autoplay-canceler
 // @namespace   https://github.com/dnek
-// @version     2.1
+// @version     2.3
 // @author      dnek
 // @description ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
 // @description:ja    ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
 // @homepageURL https://github.com/dnek/nicovideo-autoplay-canceler
 // @updateURL   https://github.com/dnek/nicovideo-autoplay-canceler/raw/main/nicovideo-autoplay-canceler.user.js
 // @downloadURL https://github.com/dnek/nicovideo-autoplay-canceler/raw/main/nicovideo-autoplay-canceler.user.js
-// @match       https://www.nicovideo.jp/watch/*
+// @match       https://www.nicovideo.jp/*
 // @grant       none
 // @license     MIT license
 // ==/UserScript==
@@ -70,6 +70,10 @@
             lastHref = href;
             console.log(`href changed to ${href}`);
             isCanceled = false;
+        }
+
+        if (!lastHref.startsWith('https://www.nicovideo.jp/watch/')) {
+            return;
         }
 
         const ctxEl = document.getElementById('menu::r5::ctx-trigger');

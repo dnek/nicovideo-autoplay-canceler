@@ -57,6 +57,10 @@
             isCanceled = false;
         }
 
+        if (!lastHref.startsWith('https://www.nicovideo.jp/watch/')) {
+            return;
+        }
+
         const ctxEl = document.getElementById('menu::r5::ctx-trigger');
         if (ctxEl !== null && !ctxEl.dataset.napcTriggered) {
             ctxEl.addEventListener('click', () => {
