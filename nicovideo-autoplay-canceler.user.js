@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        nicovideo-autoplay-canceler
 // @namespace   https://github.com/dnek
-// @version     2.3
+// @version     2.4
 // @author      dnek
 // @description ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
 // @description:ja    ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
@@ -76,7 +76,7 @@
             return;
         }
 
-        const ctxEl = document.getElementById('menu::r5::ctx-trigger');
+        const ctxEl = document.querySelector('div.grid-area_\\[player\\] div[data-part="context-trigger"]');
         if (ctxEl !== null && !ctxEl.dataset.napcTriggered) {
             ctxEl.addEventListener('click', () => {
                 if (isCanceled) {

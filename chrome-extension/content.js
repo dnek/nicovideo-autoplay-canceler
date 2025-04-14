@@ -61,7 +61,7 @@
             return;
         }
 
-        const ctxEl = document.getElementById('menu::r5::ctx-trigger');
+        const ctxEl = document.querySelector('div.grid-area_\\[player\\] div[data-part="context-trigger"]');
         if (ctxEl !== null && !ctxEl.dataset.napcTriggered) {
             ctxEl.addEventListener('click', () => {
                 if (isCanceled) {
