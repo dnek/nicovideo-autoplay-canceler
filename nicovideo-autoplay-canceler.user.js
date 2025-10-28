@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        nicovideo-autoplay-canceler
 // @namespace   https://github.com/dnek
-// @version     2.4
+// @version     2.5
 // @author      dnek
 // @description ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
 // @description:ja    ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
@@ -99,9 +99,8 @@
             return;
         }
 
-        isCanceled = true;
         videoEl.pause();
-        console.log('video paused.');
+        console.log('pause executed.');
 
         if (videoEl.currentTime < 3) {
             const rewindButton = document.querySelector('button[aria-label$=" 秒戻る"]');

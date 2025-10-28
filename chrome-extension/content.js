@@ -84,9 +84,8 @@
             return;
         }
 
-        isCanceled = true;
         videoEl.pause();
-        console.log('video paused.');
+        console.log('pause executed.');
 
         if (videoEl.currentTime < 3) {
             const rewindButton = document.querySelector('button[aria-label$=" 秒戻る"]');
