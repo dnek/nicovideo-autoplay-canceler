@@ -1,6 +1,6 @@
 {
     "name": "nicovideo-autoplay-canceler",
-    "version": "2.5",
+    "version": "2.6",
     "manifest_version": 3,
     "description": "ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。",
     "content_scripts": [
