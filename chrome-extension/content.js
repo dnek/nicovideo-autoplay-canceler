@@ -51,7 +51,7 @@
             el.dataset.napcClickListener = true;
             console.log(`nicovideo-autoplay-canceler click listener added to ${target}`);
         };
-        addClickListener('video[data-name="video-content"]', 'video');
+        addClickListener('div[data-part="context-trigger"]:has(>div[data-name="stage"])', 'video');
         addClickListener('button[aria-label="再生する"]', 'play button');
 
         if (isCanceled) {
