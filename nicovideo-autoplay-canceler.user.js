@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name			nicovideo-autoplay-canceler
 // @namespace		https://github.com/dnek
-// @version			2.6
+// @version			2.7
 // @author			dnek
 // @description		ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
 // @description:ja	ニコニコ動画で動画の自動再生が開始された直後に自動的に一時停止します。停止に少しラグがあるため、停止時の再生時間が3秒未満の場合は0秒まで戻します。「nicovideo-next-video-canceler」「nicovideo-player-expander」は別のスクリプトです。
